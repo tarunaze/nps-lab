@@ -44,14 +44,9 @@ for(;;){
             printf("The Client %s is Connected...\n",
             inet_ntoa(address.sin_addr) );
     }
-     if((pid=fork())==0)
-     {
-	 printf("inside child\n");
-	  close(listenfd);
+     
 	   str_echo(connfd);
-	   exit(0);
-	}
-      
+	      
     close(connfd);}
     return 0 ;
 }
